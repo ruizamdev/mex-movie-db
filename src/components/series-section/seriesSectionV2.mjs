@@ -1,4 +1,4 @@
-import { api } from '/src/constants.mjs';
+import { api } from '../../constants.mjs';
 
 export class SeriesSection extends HTMLElement {
   constructor() {

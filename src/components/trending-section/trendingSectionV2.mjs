@@ -1,5 +1,5 @@
-import { api } from '/src/constants.mjs';
-import { createMovieDetailsWindow } from '/src/main.mjs';
+import { api } from '../../constants.mjs';
+import { createMovieDetailsWindow } from '../../main.mjs';
 
 export class TrendingSection extends HTMLElement {
   constructor() {
