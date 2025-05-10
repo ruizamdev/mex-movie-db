@@ -19,10 +19,10 @@ Una aplicación web para explorar películas populares usando la API de [The Mov
 
 ## 📚 Tecnologías utilizadas
 
-- **React** (Vite)
+- **Vanilla (html, css & js)** (Vite)
 - **React Router DOM** (manejo de rutas)
 - **API de TheMovieDB**
-- **CSS Modules**
+- **Web Components**
 
 ---
 
@@ -69,13 +69,13 @@ npm run dev
 ## 🛠️ Estructura de carpetas
 
 ```bash
-src/
-├── components/     # Componentes reutilizables
-├── pages/          # Vistas principales
-├── services/       # Servicios API
-├── styles/         # Estilos CSS Modules
-├── App.jsx         # Componente principal
-└── main.jsx        # Punto de entrada
+root/
+├── assets/             # Assets
+├── dist/               # Dir dist/ para deploy en gh-pages
+├── public/             # Archivos públicos  
+├── src/                # Código fuente
+     ├── components/    # Componentes reutilizables
+     ├── styles/        # Estilos
 ```
 
 ---
