@@ -1,0 +1,19 @@
+{
+  "name": "mex-movie-db",
+  "private": true,
+  "version": "2.0.0",
+  "description": "A simple movie database application with vanilla JS and Vite",
+  "author": "Armando Ruiz <artmx@proton.me>",
+  "main": "index.html",
+  "type": "module",
+  "license": "MIT",
+  "base": "/mex-movie-db/",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}
