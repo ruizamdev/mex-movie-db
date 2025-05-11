@@ -87,7 +87,7 @@ export class HeaderNavbar extends HTMLElement {
       <div id="user-menu" class="user-menu vanished-menu inactive">
         <div class="menu-profile-container">
           <figure id="menu-profile-avatar" class="profile-avatar-container">
-            <img src="/avatar.png" alt="profile avatar" class="profile-avatar">
+            <img src="/images/avatar.png" alt="profile avatar" class="profile-avatar">
           </figure>
           <p class="user-name"><span class="user-name-text">Armando Ruiz</span></p>
         </div>
