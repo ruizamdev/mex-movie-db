@@ -195,21 +195,26 @@ export class TrendingSection extends HTMLElement {
         left: 0;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-        gap: min(1rem, 3vw);
+        justify-content: center;
+        gap: clamp(0.6rem, 1.2vh, 1.5rem);
         width: 100%;
         height: 100%;
-        padding: min(2rem, 4vw);
+        padding: clamp(1rem, 3vw, 2.5rem);
         color: var(--white);
         background: rgba(0,0,0,0.85);
-        outline: min(0.3rem, 0.5vw) solid var(--secondary-light-color);
+        outline: clamp(0.15rem, 0.4vw, 0.35rem) solid var(--secondary-light-color);
         outline-offset: -5px;
+        font-size: clamp(1.4rem, 4vw, 2.6rem);
+        line-height: 1.35;
+        overflow-y: auto;
         transition: all 0.3s ease-in-out;
       }
 
       .movie-details span {
-        font-size: clamp(1.2rem, 2vw, 2rem);
-        margin-inline: min(4rem, 6vw);
+        font-size: 1em;
+        margin-inline: 0.5em;
+        line-height: 1.2;
+        word-wrap: break-word;
       }
 
       .movie-details span strong {
@@ -217,20 +222,20 @@ export class TrendingSection extends HTMLElement {
       }
 
       .movie-details span.top-number {
-        font-size: clamp(1.5rem, 3vw, 4rem);
+        font-size: 1.2em;
       }
 
       .movie-btn {
-        width: 50%;
-        max-height: 42px;
-        height: 4vh;
-        margin: min(4rem, 6vw) auto;
-        border-radius: 5px;
-        padding: min(0.5rem, 1vw) min(1rem, 2vw);
-        border: none;
+        align-self: center;
+        width: 70%;
+        max-width: 150px;
+        height: auto;
+        margin-block-start: 1em;
+        padding: 0.5em 1em;
+        border-radius: 0.4em;
         color: var(--primary-dark-color);
         background-color: var(--secondary-light-color);
-        font-size: clamp(1.2rem, 2vw, 2rem);
+        font-size: 1em;
         cursor: pointer;
       }
 
