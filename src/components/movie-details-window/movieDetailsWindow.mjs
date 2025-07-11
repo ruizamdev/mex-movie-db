@@ -22,6 +22,7 @@ export class MovieDetailsWindow extends HTMLElement {
   connectedCallback() {
     this.render();
     this.loadMovieDetails();
+    this.navigation();
     // Listeners, inits, etc.
   }
 
@@ -85,6 +86,13 @@ export class MovieDetailsWindow extends HTMLElement {
       year: 'numeric'
     };
     return new Intl.DateTimeFormat('es-MX', options).format(date);
+  }
+
+  navigation(){
+    const movieDetailsWindow = document.querySelector('movie-details-window');
+    // console.log(movieDetailsWindow);
+    const movieId = movieDetailsWindow.getAttribute("movie-id");
+    // console.log(movieId);
   }
 
   getTemplate() {

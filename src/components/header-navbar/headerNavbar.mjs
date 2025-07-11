@@ -517,7 +517,7 @@ export class HeaderNavbar extends HTMLElement {
     const header = document.querySelector('header-navbar');
     const logoTitle = header.shadowRoot.querySelector('.header-title');
     logoTitle.addEventListener('click', () => {
-      location.hash = '#home';
+      location.hash = '';
     })
     const movieLink = header.shadowRoot.querySelector('.navbar-item-movies');
     movieLink.addEventListener('click', () => {
@@ -529,7 +529,7 @@ export class HeaderNavbar extends HTMLElement {
     });
     const peopleLink  = header.shadowRoot.querySelector('.navbar-item-people');
     peopleLink.addEventListener('click', () => {
-      location.hash = '#people';
+      location.hash = '#personas';
     });
     const userAssets = header.shadowRoot.querySelector('.user-assets');
     const search = userAssets.querySelector('.search-icon');

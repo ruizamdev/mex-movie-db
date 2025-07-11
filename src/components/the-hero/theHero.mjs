@@ -39,7 +39,8 @@ export class TheHero extends HTMLElement {
       this.sliderContainer.addEventListener('mouseleave', this.resumeSlider);
       this.sliderContainer.addEventListener('touchstart', this.pauseSlider);
       this.sliderContainer.addEventListener('touchend', this.resumeSlider);
-    })
+    });
+    this.navigation();
   }
 
   createSlide(movie, counter) {
@@ -309,4 +310,12 @@ export class TheHero extends HTMLElement {
     `;
   }
 
+  navigation(){
+    const theHero = document.querySelector('the-hero');
+    const heroDetailsButton = theHero.shadowRoot.querySelector('.hero-info__movie-btn');
+    const heroDetailsButtonId = heroDetailsButton.id
+    heroDetailsButton.addEventListener('click', () => {
+      location.hash = `#${heroDetailsButtonId}`;
+    })
+  }
 }
