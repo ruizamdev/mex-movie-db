@@ -1,6 +1,6 @@
 // movieDetailsWindow.mjs
 
-import { api } from '../../constants.mjs'
+import { api, setPreviousHash } from '../../constants.mjs'
 export class MovieDetailsWindow extends HTMLElement {
   
   constructor() {
@@ -72,7 +72,7 @@ export class MovieDetailsWindow extends HTMLElement {
       this.remove();
       document.body.style.position = 'static';
       document.body.style.inset = '0';
-      location.hash = '';
+      location.hash = setPreviousHash();
     });
 
     this.shadowRoot.querySelector('.movie-details-container').appendChild(container);
@@ -87,13 +87,6 @@ export class MovieDetailsWindow extends HTMLElement {
       year: 'numeric'
     };
     return new Intl.DateTimeFormat('es-MX', options).format(date);
-  }
-
-  navigation(){
-    const movieDetailsWindow = document.querySelector('movie-details-window');
-    // console.log(movieDetailsWindow);
-    const movieId = movieDetailsWindow.getAttribute("movie-id");
-    // console.log(movieId);
   }
 
   getTemplate() {

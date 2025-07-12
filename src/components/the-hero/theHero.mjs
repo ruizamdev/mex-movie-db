@@ -1,6 +1,6 @@
 // Nombre: theHero.mjs
 
-import { api, previousLocationHash } from  '../../constants.mjs';
+import { api, setPreviousHash } from  '../../constants.mjs';
 import { createMovieDetailsWindow } from '../../main.mjs';
 
 export class TheHero extends HTMLElement {
@@ -87,8 +87,8 @@ export class TheHero extends HTMLElement {
     const detailsButtons = this.shadowRoot.querySelectorAll('.hero-info__movie-btn');
     detailsButtons.forEach(button => {
       button.addEventListener('click', () => {
-        previousLocationHash = location.hash;
-        console.log(previousLocationHash);
+        setPreviousHash(location.hash);
+        console.log(setPreviousHash())
         const movieId = button.id;
         location.hash = `#movie-${movieId}`;
         createMovieDetailsWindow(movieId);

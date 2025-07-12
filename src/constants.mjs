@@ -12,4 +12,12 @@ const api = axios.create({
 
 let previousLocationHash;
 
-export { api, previousLocationHash };
+export function setPreviousHash(value){
+    previousLocationHash = value;
+}
+
+export function getPreviousHash(){
+    return previousLocationHash;
+}
+
+export { api };
