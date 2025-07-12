@@ -72,6 +72,7 @@ export class MovieDetailsWindow extends HTMLElement {
       this.remove();
       document.body.style.position = 'static';
       document.body.style.inset = '0';
+      location.hash = '';
     });
 
     this.shadowRoot.querySelector('.movie-details-container').appendChild(container);

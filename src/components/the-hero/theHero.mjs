@@ -1,6 +1,6 @@
 // Nombre: theHero.mjs
 
-import { api } from  '../../constants.mjs';
+import { api, previousLocationHash } from  '../../constants.mjs';
 import { createMovieDetailsWindow } from '../../main.mjs';
 
 export class TheHero extends HTMLElement {
@@ -40,7 +40,6 @@ export class TheHero extends HTMLElement {
       this.sliderContainer.addEventListener('touchstart', this.pauseSlider);
       this.sliderContainer.addEventListener('touchend', this.resumeSlider);
     });
-    this.navigation();
   }
 
   createSlide(movie, counter) {
@@ -88,7 +87,10 @@ export class TheHero extends HTMLElement {
     const detailsButtons = this.shadowRoot.querySelectorAll('.hero-info__movie-btn');
     detailsButtons.forEach(button => {
       button.addEventListener('click', () => {
+        previousLocationHash = location.hash;
+        console.log(previousLocationHash);
         const movieId = button.id;
+        location.hash = `#movie-${movieId}`;
         createMovieDetailsWindow(movieId);
       });
     });
@@ -308,14 +310,5 @@ export class TheHero extends HTMLElement {
           }
         }
     `;
-  }
-
-  navigation(){
-    const theHero = document.querySelector('the-hero');
-    const heroDetailsButton = theHero.shadowRoot.querySelector('.hero-info__movie-btn');
-    const heroDetailsButtonId = heroDetailsButton.id
-    heroDetailsButton.addEventListener('click', () => {
-      location.hash = `#${heroDetailsButtonId}`;
-    })
   }
 }

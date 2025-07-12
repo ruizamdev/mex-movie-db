@@ -10,4 +10,6 @@ const api = axios.create({
     }
 });
 
-export { api };
+let previousLocationHash;
+
+export { api, previousLocationHash };
