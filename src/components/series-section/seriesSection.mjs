@@ -80,7 +80,7 @@ export class SeriesSection extends HTMLElement {
     const tpl = document.createElement('template');
     tpl.innerHTML = /* html */ `
       <section class="trendingPreview">
-        <h2>Top 20 Películas en Tendencias</h2>
+        <h2>Top 20 Series en Tendencias</h2>
           <ul class="trendingPreview-movieList">
           <button class="scroll-btn prev" aria-label="Anterior">\u276E</button>
           <button class="scroll-btn next" aria-label="Siguiente">\u276F</button>
